@@ -1,0 +1,710 @@
+:root {
+  --bg-color: #222;
+  --text-color: #fff;
+  --accent-color: #ff7f50;
+  --header-bg: rgba(0, 0, 0, 0.7);
+  --section-bg: rgba(0, 0, 0, 0.6);
+  --secondary-color: #ff7f50; /* ou la couleur de ton choix */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('image1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--header-bg);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Regroupement du titre et de la navigation à gauche */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 20px 0 0;
+  font-size: 1.8rem;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Icônes des réseaux sociaux dans l'en-tête */
+.social-icons-header {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons-header a {
+  color: var(--text-color);
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons-header a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero section styles */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 80px; /* pour éviter que le header fixe ne cache le contenu */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Style principal du H2 dans la Hero */
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  /* Pour mettre en avant le nom */
+}
+
+.hero h2 span {
+  color: var(--accent-color);
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.4em;
+  color: var(--accent-color);
+  margin: 0 0 20px;
+}
+
+/* Paragraphe dans la Hero */
+.hero p {
+  font-size: 1.2em;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Bouton styles */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff6b3d;
+  transform: scale(1.05);
+}
+
+/* Section styles */
+.section {
+  padding: 80px 20px;
+  background: var(--section-bg);
+  margin: 20px;
+  border-radius: 10px;
+  min-height: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Légère ombre autour des sections */
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titres de section */
+.section-content h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Project styles */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 25px 0;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 1.5em;
+}
+
+.project-date {
+  background: rgba(255, 127, 80, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.project-body {
+  text-align: left;
+}
+
+.project-features {
+  margin-top: 15px;
+}
+
+.project-features h4 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.project-features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-features li {
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-features li:before {
+  content: "•";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--header-bg);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-left {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+  
+  .tagline {
+    font-size: 1.2em;
+  }
+
+  .section {
+    margin: 10px;
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero p {
+    font-size: 1em;
+  }
+  
+  .btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  
+  .project-header h3 {
+    font-size: 1.2em;
+  }
+  
+  .social-icons-header a {
+    font-size: 1.3em;
+  }
+}
+
+/* Styles spécifiques pour les certifications */
+.certification-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px; /* Augmenter l'écart pour une meilleure visibilité */
+  margin-top: 20px;
+}
+
+.certification-list .project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px; /* Ajout d'un arrondi pour un design plus doux */
+  overflow: hidden; /* Pour gérer les bords arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet de profondeur */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-list .project-card:hover {
+  transform: translateY(-10px); /* Effet au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.certification-list .project-header {
+  padding: 20px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.certification-list .project-header h3 {
+  color: var(--accent-color);
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.certification-list .project-body {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.certification-list .project-body p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1em;
+}
+
+.certification-list .project-image {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.certification-list .certif-img {
+  max-width: 100%;
+  border-radius: 8px; /* Bordure arrondie pour l'image */
+  transition: transform 0.3s ease;
+}
+
+.certification-list .certif-img:hover {
+  transform: scale(1.05); /* Effet zoom sur l'image au survol */
+}
+
+
+
+.menu-about {
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Dégradé de couleurs */
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white !important;
+}
+
+.menu-about:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb); /* Inversion du dégradé */
+  transform: scale(1.1); /* Effet de zoom */
+}
+
+/* Section "À propos" */
+.about-section {
+background: radial-gradient(circle, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 100%);
+color: white;
+padding: 50px;
+border-radius: 15px;
+text-align: left;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Conteneur flex pour disposer l'image et le texte côte à côte */
+.about-content {
+display: flex;
+flex-wrap: nowrap; /* Pour conserver deux colonnes sur grand écran */
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Colonne image et colonne texte à 50% */
+.about-img-container,
+.about-text {
+width: 50%;
+padding: 10px; /* Espace intérieur */
+}
+
+.profile-image-container {
+  width: 100px;               /* Taille du conteneur */
+  height: 100px;              /* Taille du conteneur */
+  margin: 0 auto 1rem;        /* Marge autour du conteneur */
+  position: relative;         /* Position relative pour plus de contrôle si besoin */
+  overflow: hidden;           /* Cache la partie de l'image qui dépasse */
+}
+
+.profile-image {
+  width: 50%;                /* Prend toute la largeur du conteneur */
+  height: 50%;               /* Prend toute la hauteur du conteneur */
+  border-radius: 30%;         /* Pour arrondir l'image */
+  object-fit: cover;          /* Ajuste l'image sans déformation, remplissant le conteneur */
+  border: 2px solid var(--secondary-color); /* Bordure autour de l'image */
+}
+
+
+
+
+.logo {
+  width: 60px; /* Ajuste la taille du logo */
+  height: 60px; /* Assure que la hauteur et la largeur sont égales pour un cercle parfait */
+  border-radius: 50%; /* Fait en sorte que l'image devienne un cercle */
+  object-fit: cover; /* Maintient la proportion de l'image en la redimensionnant */
+  display: inline-block;
+}
+
+/* --- Styles de la section Contact --- */
+#contact {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(10px);
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* --- Titre de la section --- */
+#contact h2 {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+/* --- Infos de contact --- */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-info .info-item:hover {
+  transform: scale(1.05);
+}
+
+.contact-info .info-item i {
+  font-size: 1.8em;
+  color: var(--accent-color);
+  margin-right: 15px;
+}
+
+.contact-info .info-item p {
+  font-size: 1.1em;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* --- Formulaire de contact --- */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* --- Champs du formulaire --- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* --- Bouton Envoyer --- */
+.contact-form .btn-submit {
+  background: var(--accent-color);
+  color: white;
+  padding: 14px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form .btn-submit:hover {
+  background: var(--accent-color-dark);
+  transform: scale(1.05);
+}
+
+/* Section globale */
+.education-section {
+  background-color: #121131; /* Ajuste selon ta palette */
+  padding: 2rem;
+  color: #fff;
+  font-family: sans-serif; /* Choisis la police de ton choix */
+}
+
+/* Titre de section */
+.education-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Container pour les cartes */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Style de base pour chaque carte */
+.education-card {
+  background-color: #1D1B2C; /* Couleur de fond de la carte */
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Titre de la formation */
+.education-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Établissement et période */
+.institution {
+  font-size: 0.9rem;
+  color: #B3B3B3;
+  margin-bottom: 1rem;
+}
+
+/* Description du cursus */
+.description {
+  margin-bottom: 1rem;
+  color: #D3D3D3;
+  line-height: 1.4;
+}
+
+/* Conteneur de tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Style des tags */
+.tags span {
+  background-color: #2B2850;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Responsive : ajuster le padding et la taille du texte sur petits écrans */
+@media (max-width: 600px) {
+  .education-section {
+    padding: 1rem;
+  }
+
+  .education-card {
+    padding: 1rem;
+  }
+
+  .education-card h3 {
+    font-size: 1rem;
+  }
+  
+  
+}
+.education-card {
+  background-color: #1D1B2C;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  /* Ajoute une transition pour la transformation et la box-shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  /* Soulève légèrement la carte */
+  transform: translateY(-5px);
+  
+  /* Accentue l'ombre pour donner un effet de « flottement » */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.education-card h3 {
+  color: #FF7B26; /* Orange vif */
+}  
+
+
+
+/* Technical Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.skill-bar {
+  margin-bottom: 1rem;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.progress {
+  height: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--secondary-color);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+.date {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
